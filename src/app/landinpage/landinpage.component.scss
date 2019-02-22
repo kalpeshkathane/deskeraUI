@@ -1,0 +1,25 @@
+.example-card {
+  background-color: #673AB7;
+  border-radius: 0px
+}
+
+mat-card.left-banner.mat-card {
+  background-color: transparent;
+  text-align: center;
+  box-shadow: 0px transparent !important;
+  color: #fff;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container>* {
+  width: 100%;
+}
+
+.formenq.mat-card {
+  width: 40%;
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef> Country </th>
+        <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+      </ng-container>
+      <ng-container matColumnDef="alpha2code">
+        <th mat-header-cell *matHeaderCellDef> Country Code (2) </th>
+        <td mat-cell *matCellDef="let element"> {{element.alpha2code}} </td>
+      </ng-container>
+      <ng-container matColumnDef="alpha3code">
+        <th mat-header-cell *matHeaderCellDef> Country Code (3) </th>
+        <td mat-cell *matCellDef="let element"> {{element.alpha3code}} </td>
+      </ng-container>
+      <ng-container matColumnDef="domain">
+        <th mat-header-cell *matHeaderCellDef> Domain </th>
+        <td mat-cell *matCellDef="let element"> {{element.domain}} </td>
+      </ng-container>
+      <ng-container matColumnDef="phoneno">
+        <th mat-header-cell *matHeaderCellDef> Phone No </th>
+        <td mat-cell *matCellDef="let element"> {{element.phoneno}} </td>
+      </ng-container>
+      <ng-container matColumnDef="currency">
+        <th mat-header-cell *matHeaderCellDef> Currency </th>
+        <td mat-cell *matCellDef="let element"> {{element.currency}} </td>
+      </ng-container>  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
