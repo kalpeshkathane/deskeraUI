@@ -1,0 +1,63 @@
+.example-card {
+  border-radius: 0px;
+  // background-color: #673AB7;
+  background: url('../../assets/image/Parallax-background.jpg') !important;
+}
+
+
+mat-card.left-banner.mat-card {
+  background-color: transparent;
+  box-shadow: 0px transparent !important;
+  color: #fff;
+  text-align: center;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container>* {
+  width: 100%;
+}
+
+.formenq.mat-card {
+  width: 40%;
+  text-align: center;
+}
+.example-card-section {
+  margin: 10px 15px;
+  max-width: 280px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.section {
+     display: flex;
+     align-items: center;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+     padding: 45px 25px;
+     background-color: #fff;
+}
+  .block2 {
+    background-color: #2aa8e5
+  }
+
+  .example-card-2{
+      align-content: center;
+      justify-content: center;
+      background: url('../../assets/image/meet-your-team.jpg');
+      background-size: cover;
+      h2 {
+        padding: 0px 20px;
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+  }

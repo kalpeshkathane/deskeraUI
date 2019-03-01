@@ -1,0 +1,135 @@
+<mat-grid-list class="example-card" cols="2">
+  <mat-grid-tile rowspan="1" colspan="1">
+    <mat-card class="left-banner">
+      <h1>Best Landing Page For Your Bussiness Lead</h1>
+      <h3>Note that a landing page can potentially be home page although this is not good practice</h3>
+      <!-- <img src="./assets/image/goal-image.jpg" width="500px"> -->
+    </mat-card>
+  </mat-grid-tile>
+<mat-grid-tile rowspan="1" colspan="1">
+    <mat-card class="formenq">
+      <form class="example-form" [formGroup]="ownerForm" novalidate (ngSubmit)="saveData(ownerForm.value)">
+        <mat-card-content>
+          <div class="example-container">
+            <mat-form-field>
+              <mat-select [(ngModel)]="countryValue" formControlName="country" placeholder="Country">
+                <mat-option *ngFor="let country of countryData" (onSelectionChange)="onSelect($event, country)" [value]="country.alpha2Code"><img
+                    src="{{country.flag}}" width="18px" />
+                  &nbsp; {{country.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput formControlName="topLevelDomainValue" placeholder="Domain" [(ngModel)]="topLevelDomainValue"
+                required>
+              <span matSuffix> &nbsp; {{topLevelDomain}}</span>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput formControlName="alpha2Code" placeholder="Country Code (2)" [(ngModel)]="alpha2Code"
+                required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput formControlName="alpha3Code" placeholder="Country Code (3)" [(ngModel)]="alpha3Code"
+                required>
+            </mat-form-field>
+            <mat-form-field>
+              <span matPrefix>+{{callingCodes}} &nbsp;</span>
+              <input type="tel" matInput formControlName="callingNo" placeholder="Phone No" [(ngModel)]="callingNo"
+                required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput formControlName="currencies" placeholder="Currency" [(ngModel)]="currencies" required>
+              <span matSuffix> &nbsp; {{currenciesymbol}}</span>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput formControlName="currentTime" placeholder="Current Time" [(ngModel)]="currentTime"
+                disabled>
+              <span matSuffix> &nbsp; {{timezones}}</span>
+            </mat-form-field>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button [disabled]="!ownerForm.valid" color="primary">Submit</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<div class="section block3">
+<mat-card class="example-card-section">
+  <img mat-card-image src="../../assets/image/Marketing-Emails.png" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+</mat-card>
+<mat-card class="example-card-section">
+<img mat-card-image src="../../assets/image/teamwork.png" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+</mat-card>
+<mat-card class="example-card-section">
+<img mat-card-image src="../../assets/image/training-sales.png" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+</mat-card>
+<mat-card class="example-card-section">
+  <img mat-card-image src="../../assets/image/teamwork.png" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+</mat-card>
+</div>
+<mat-grid-list class="example-card-2" rows="1" cols="1" rowHeight="500px">
+  <mat-grid-tile>
+    <h2>Talent wins games, but teamwork and intelligence win championships.</h2>
+  </mat-grid-tile>
+</mat-grid-list>
+<div class="section block2">
+  <mat-card class="example-card-section">
+    <img mat-card-image src="../../assets/image/Marketing-Emails.png" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card-section">
+    <img mat-card-image src="../../assets/image/teamwork.png" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card-section">
+    <img mat-card-image src="../../assets/image/training-sales.png" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
